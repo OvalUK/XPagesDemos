@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0">
+  <item name="$Flags">
+    <text>34567Cg~`</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>bootstrap3.0.theme</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>bootstrap3.0.theme</text>
+  </item>
+  <item name="$CSSFiles">
+    <textlist>
+      <text>/.ibmxspres/.extlib/bootstrap/xsptheme/xsp.css</text>
+      <text>/.ibmxspres/domino/cdn.nsf/bootstrap/css/bootstrap.css</text>
+      <text>/.ibmxspres/.extlib/bootstrap/dbootstrap/dbootstrap.css</text>
+      <text>/.ibmxspres/domino/cdn.nsf/bootstrap/css/xpages.css</text>
+      <text>bootstrapResAgFix.css</text>
+    </textlist>
+  </item>
+</note>

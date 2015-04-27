@@ -1,0 +1,4 @@
+div.markdown-input {
+	min-height:200px;height:auto;
+}
+textarea.markdown-input {display:none}

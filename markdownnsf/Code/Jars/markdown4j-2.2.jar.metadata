@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0">
+  <item name="$TITLE">
+    <text>markdown4j-2.2.jar</text>
+  </item>
+  <item name="$Flags">
+    <text>34567Cg~,</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>markdown4j-2.2.jar</text>
+  </item>
+</note>

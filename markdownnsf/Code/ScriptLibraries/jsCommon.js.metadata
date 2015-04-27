@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter" maintenanceversion="1.0">
+  <item name="$TITLE" sign="true">
+    <text>jsCommon</text>
+  </item>
+  <item name="$Flags">
+    <text>h534Q</text>
+  </item>
+  <item name="$PublicAccess" sign="true">
+    <text>1</text>
+  </item>
+  <item name="$POID">
+    <datetime>20131104T204323,07+00</datetime>
+  </item>
+</note>

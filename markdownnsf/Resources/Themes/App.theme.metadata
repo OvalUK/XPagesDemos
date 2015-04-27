@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0">
+  <item name="$Flags">
+    <text>34567Cg~`</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>OpenNTF.theme</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>App.theme</text>
+  </item>
+</note>

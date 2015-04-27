@@ -1,0 +1,164 @@
+<theme extends="bootstrap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+<!--   -->
+	
+
+	<!-- meta tags -->
+	<resources>
+		<metaData>
+			<name>viewport</name>
+			<content>width=device-width, initial-scale=1.0</content>
+		</metaData>
+	</resources>
+
+	
+
+	<!-- jquery -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>/.ibmxspres/domino/cdn.nsf/jquery/jquery-1.8.2.min.js</href>
+	</resource>
+
+	<!-- history -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>/.ibmxspres/domino/cdn.nsf/jquery/jquery.history.js</href>
+	</resource>
+
+	<!-- bootstrap js -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>/.ibmxspres/domino/cdn.nsf/bootstrap/js/bootstrap.js</href>
+	</resource>
+
+
+
+<!-- Core XPages styles -->
+<!-- bootstrap css-->
+<resource>
+		<content-type>text/css</content-type>
+		<!-- <href>bootstrap/css/xsp.css</href>-->
+		 <href>/.ibmxspres/.extlib/bootstrap/xsptheme/xsp.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>/.ibmxspres/domino/cdn.nsf/bootstrap/css/bootstrap.css</href>
+	</resource>
+	
+	
+	
+
+	<!-- Dojo Theme (dbootstrap)-->
+	<resource dojoTheme="true">
+		<content-type>text/css</content-type>
+		<!-- <href>bootstrap/css/dbootstrap.css</href>-->
+		<href>/.ibmxspres/.extlib/bootstrap/dbootstrap/dbootstrap.css</href>
+			
+	</resource>
+
+	<!-- XPages/Bootstrap specific styles -->
+	
+	<resource>
+		<content-type>text/css</content-type>
+		<href>/.ibmxspres/domino/cdn.nsf/bootstrap/css/xpages.css</href>
+				<!-- <href>/.ibmxspres/.extlib/bootstrap/xpages.css</href> -->
+	</resource>
+
+	<!--
+		font-awesome css <resource> <content-type>text/css</content-type>
+		<href>font-awesome/css/font-awesome.min.css</href> </resource>
+	-->
+
+
+	<!-- resource aggregation fix -->
+	<!--
+		http://bootstrap4xpages.com/bs4xp/site.nsf/article.xsp?documentId=F435B6DC54486B67C1257B6B002E5A6C&action=openDocument
+	-->
+	<resource
+		rendered="#{javascript:context.getProperty('xsp.resources.aggregate').equals('true')}">
+		<content-type>text/css</content-type>
+		<href>bootstrapResAgFix.css</href>
+	</resource>
+
+	<!--
+		Bootstrap customizations <resource>
+		<content-type>text/css</content-type>
+		<href>bootstrap-extended.css</href> </resource> <resource>
+		<content-type>text/css</content-type>
+		<href>bootstrap/css/bootstrap-responsive.min.css</href> </resource>
+	-->
+	<!-- it looks like a link, but acts like a button -->
+	<control>
+		<name>link.button</name>
+		<property mode="override">
+			<name>styleClass</name>
+			<value>btn btn-link</value>
+		</property>
+	</control>
+
+	<!--
+		====================================================================================
+	-->
+	<!-- Set the view control styles -->
+	<!--
+		====================================================================================
+	-->
+
+	<control>
+		<name>DataTable.ViewPanel</name>
+		<property>
+			<name>dataTableStyleClass</name>
+			<value>table table-condensed</value>
+		</property>
+	</control>
+
+	<control>
+		<name>DataTable</name>
+		<property>
+			<name>styleClass</name>
+			<value>table table-condensed</value>
+		</property>
+	</control>
+	<!--  MR CUSTOM -->
+	<!--
+		================== Pager / PagerControl
+		================================
+	-->
+
+	<!-- Pager -->
+	<control>
+		<name>Pager</name>
+		<property>
+			<name>rendererType</name>
+			<value>org.openntf.xsp.bootstrap.data.BootstrapPagerRenderer3</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value></value>
+		</property>
+	</control>
+
+	<!-- Input fields -->
+	<control>
+		<name>InputField</name>
+		<property mode="override">
+			<name>styleClass</name>
+			<value>form-control</value>
+		</property>
+	</control>
+	<control>
+		<name>InputField.RichText</name>
+		<property mode="override">
+			<name>styleClass</name>
+			<value></value>
+		</property>
+	</control>
+
+	<control>
+		<name>ComboBox</name>
+		<property mode="override">
+			<name>styleClass</name>
+			<value>form-control</value>
+		</property>
+	</control>
+</theme>

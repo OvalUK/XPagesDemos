@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/md-images.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/ccMDInput.css"></xp:styleSheet>
+	</xp:this.resources>
+	<!--  Read Mode -->
+	<xp:text escape="false" id="computedField3"
+		rendered="#{javascript:!compositeData.dataSource.isEditable()}" value="#{compositeData.dataSource[compositeData.fieldName]}">
+		<xp:this.converter>
+			<xp:customConverter
+				getAsObject="#{javascript:com.ibm.xsp.http.MimeMultipart.fromHTML(value)}">
+				<xp:this.getAsString><![CDATA[#{javascript:var val = value.getHTML();
+				if (val) {
+importPackage(com.uk.oval.markdown);
+	var output = Processor.process(val);
+	return output;
+	} else {
+	return "";
+	}
+}]]></xp:this.getAsString>
+			</xp:customConverter>
+		</xp:this.converter>
+	</xp:text>
+
+	<!--  Edit Mode -->
+	<xp:div id="inputMD" styleClass="form-control markdown-input"
+		rendered="#{javascript:compositeData.dataSource.isEditable()}">
+		<xp:this.attrs>
+			<xp:attr value="true" name="contentEditable"></xp:attr>
+		</xp:this.attrs>
+		<xp:text escape="false"
+			value="#{compositeData.dataSource[compositeData.fieldName]}">
+			<xp:this.converter>
+				<xp:customConverter
+					getAsObject="#{javascript:com.ibm.xsp.http.MimeMultipart.fromHTML(value)}">
+					<xp:this.getAsString><![CDATA[#{javascript:value.getHTML().replace(/\n/g, '<br>')
+				 }]]></xp:this.getAsString>
+				</xp:customConverter>
+			</xp:this.converter>
+		</xp:text>
+	</xp:div>
+	<xp:div styleClass="pull-left"
+		rendered="#{javascript:compositeData.dataSource.isEditable()}" id="div1">
+		<small>
+			Text will be parsed with&#160;
+			<a href="http://daringfireball.net/projects/markdown/basics"
+				target="_blank">Markdown</a>
+		</small>
+	</xp:div>
+	<xp:inputTextarea id="inputMD_Fld"
+		value="#{compositeData.dataSource[compositeData.fieldName]}"
+		disableTheme="true" rendered="#{javascript:compositeData.dataSource.isEditable()}" styleClass="markdown-input">
+		<xp:this.converter>
+			<xp:customConverter getAsString="#{javascript:value.getContentAsText() }"
+				getAsObject="#{javascript:com.ibm.xsp.http.MimeMultipart.fromHTML(value)}">
+			</xp:customConverter>
+		</xp:this.converter>
+	</xp:inputTextarea>
+	<xp:eventHandler event="onClientLoad" submit="false">
+		<xp:this.script><![CDATA[var formId = XSP.findForm('#{id:inputMD_Fld}').id;
+	XSP.addPreSubmitListener(formId, function run() {
+		fnUpdateMDFld('#{id:inputMD}');
+	}, null, '#{id:inputMD_Fld}');
+	//}, null, '#{javascript:@Random()}');]]></xp:this.script>
+	</xp:eventHandler>
+</xp:view>

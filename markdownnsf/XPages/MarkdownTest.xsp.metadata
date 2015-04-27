@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0">
+  <item name="$TITLE">
+    <text>MarkdownTest.xsp</text>
+  </item>
+  <item name="$Flags">
+    <text>gC~4K</text>
+  </item>
+  <item name="$PublicAccess">
+    <text>1</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>MarkdownTest.xsp</text>
+  </item>
+</note>

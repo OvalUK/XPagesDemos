@@ -1,0 +1,55 @@
+<theme extends="bootstrap3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<control>
+  <name>ViewRoot</name>
+  <property>
+    <name>pageTitle</name>
+    <value>Oval Business Solutions: Ask us about XPages</value>
+  </property>
+</control>
+		<!-- XPages Buttons -->
+	<control>
+		<name>Button</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn</value>
+		</property>
+		<property>
+			<name>outerStyleClass</name>
+			<value></value>
+		</property>
+	</control>
+	<control>
+		<name>Button.Command</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn</value>
+		</property>
+		<property>
+			<name>outerStyleClass</name>
+			<value></value>
+		</property>
+	</control>
+	
+	<!--  fix for panels -->
+	<control>
+		<name>Container.Widget</name>
+		<property>
+			<name>styleClass</name>
+			<value>panel-default</value>
+		</property>
+	</control>
+	
+	<control>
+		<name>Container.Widget.NoBody</name>
+		<property>
+			<name>rendererType</name>
+			<value>org.openntf.xsp.bootstrap.containers.BootstrapWidgetContainer.NoBody</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>panel-default</value>
+		</property>
+	</control>
+ 
+</theme>
